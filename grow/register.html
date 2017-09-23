@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <form method="POST">
+        {% csrf_token %}
+        <label>
+            Имя пользователя (логин):
+            <input type="text" name="username">
+        </label>
+        <label>
+            Электронная почта:
+            <input type="text" name="email">
+        </label>
+        <label>
+            Имя:
+            <input type="text" name="email">
+        </label>
+        <label>
+            Фамилия:
+            <input type="text" name="email">
+        </label>
+        <label>
+            Пароль:
+            <input type="text" name="email">
+        </label>
+        <label>
+            Введите пароль ещё раз:
+            <input type="text" name="email">
+        </label>
+        <button action="submit">Зарегистрироваться</button>
+    </form>
+
+{% endblock %}
