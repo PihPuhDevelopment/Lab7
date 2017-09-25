@@ -70,3 +70,10 @@ body{
     text-decoration: none;
     color: #000;
 }
+
+.error{
+    background-color: #ffb7bd;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 7px;
+}

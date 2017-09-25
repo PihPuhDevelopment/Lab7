@@ -3,6 +3,14 @@
 {% block content %}
 <div class="article-body">
 
+    {% if errors %}
+        {% for error in errors %}
+            <div class="error">
+                {{error}}
+            </div>
+        {% endfor %}
+    {% endif %}
+
     <form method="POST">
         {% csrf_token %}
         <div class="content">
@@ -14,7 +22,7 @@
                     </label>
                 </td>
                 <td>
-                    <input type="text" name="username">
+                    <input type="text" name="username" value="{{formdata.username}}">
                 </td>
             </tr>
             <tr>
@@ -24,7 +32,7 @@
                     </label>
                 </td>
                 <td>
-                    <input type="text" name="email">
+                    <input type="text" name="email" value="{{formdata.email}}">
                 </td>
             </tr>
             <tr>
@@ -34,7 +42,7 @@
                     </label>
                 </td>
                 <td>
-                    <input type="text" name="firstname">
+                    <input type="text" name="firstname" value="{{formdata.firstname}}">
                 </td>
             </tr>
             <tr>
@@ -44,7 +52,7 @@
                     </label>
                 </td>
                 <td>
-                    <input type="text" name="lastname">
+                    <input type="text" name="lastname" value="{{formdata.lastname}}">
                 </td>
             </tr><tr>
                 <td>
@@ -53,7 +61,7 @@
                     </label>
                 </td>
                 <td>
-                    <input type="text" name="password">
+                    <input type="text" name="password" value="{{formdata.password}}">
                 </td>
             </tr><tr>
                 <td>
