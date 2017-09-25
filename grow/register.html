@@ -1,34 +1,77 @@
 {% extends 'base.html' %}
 
 {% block content %}
+<div class="article-body">
 
     <form method="POST">
         {% csrf_token %}
-        <label>
-            Имя пользователя (логин):
-            <input type="text" name="username">
-        </label>
-        <label>
-            Электронная почта:
-            <input type="text" name="email">
-        </label>
-        <label>
-            Имя:
-            <input type="text" name="email">
-        </label>
-        <label>
-            Фамилия:
-            <input type="text" name="email">
-        </label>
-        <label>
-            Пароль:
-            <input type="text" name="email">
-        </label>
-        <label>
-            Введите пароль ещё раз:
-            <input type="text" name="email">
-        </label>
-        <button action="submit">Зарегистрироваться</button>
+        <div class="content">
+        <table align="center">
+            <tr>
+                <td>
+                    <label>
+                        Имя пользователя (логин):
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="username">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Электронная почта:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="email">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Имя:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="firstname">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        Фамилия:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="lastname">
+                </td>
+            </tr><tr>
+                <td>
+                    <label>
+                        Пароль:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="password">
+                </td>
+            </tr><tr>
+                <td>
+                    <label>
+                        Введите пароль ещё раз:
+                    </label>
+                </td>
+                <td>
+                    <input type="text" name="confirmpass">
+                </td>
+            </tr>
+        </table>
+
+            <button action="submit" class="btn btn-primary">Зарегистрироваться</button>
+            </div>
+
     </form>
+
+    </div>
 
 {% endblock %}
